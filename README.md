@@ -1,2 +1,2 @@
 # WordScrambleSwiftUI
-[In Progress] SwiftUI word puzzle game
+SwiftUI word puzzle game
