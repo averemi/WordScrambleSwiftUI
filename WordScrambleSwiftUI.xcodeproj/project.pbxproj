@@ -14,6 +14,7 @@
 		A18AF40A28CD44FF00E36B2B /* WordScrambleSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18AF40928CD44FF00E36B2B /* WordScrambleSwiftUITests.swift */; };
 		A18AF41428CD44FF00E36B2B /* WordScrambleSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18AF41328CD44FF00E36B2B /* WordScrambleSwiftUIUITests.swift */; };
 		A18AF41628CD44FF00E36B2B /* WordScrambleSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18AF41528CD44FF00E36B2B /* WordScrambleSwiftUIUITestsLaunchTests.swift */; };
+		A1E41D2028CE816500C45D10 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1E41D1F28CE816400C45D10 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A18AF40F28CD44FF00E36B2B /* WordScrambleSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordScrambleSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18AF41328CD44FF00E36B2B /* WordScrambleSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleSwiftUIUITests.swift; sourceTree = "<group>"; };
 		A18AF41528CD44FF00E36B2B /* WordScrambleSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1E41D1F28CE816400C45D10 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		A18AF3F728CD44FD00E36B2B /* WordScrambleSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				A1E41D1F28CE816400C45D10 /* start.txt */,
 				A18AF3F828CD44FD00E36B2B /* WordScrambleSwiftUIApp.swift */,
 				A18AF3FA28CD44FD00E36B2B /* ContentView.swift */,
 				A18AF3FC28CD44FF00E36B2B /* Assets.xcassets */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18AF40028CD44FF00E36B2B /* Preview Assets.xcassets in Resources */,
+				A1E41D2028CE816500C45D10 /* start.txt in Resources */,
 				A18AF3FD28CD44FF00E36B2B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
