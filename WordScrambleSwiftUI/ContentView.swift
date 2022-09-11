@@ -15,6 +15,8 @@ struct ContentView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
+    
+    @State private var score = 0
 
     var body: some View {
         NavigationView {
@@ -32,6 +34,10 @@ struct ContentView: View {
                         }
                     }
                 }
+
+                Section {
+                    Text("Score: \(score)")
+                }
             }
             .navigationTitle(rootWord)
             .onSubmit(addNewWord)
@@ -40,6 +46,9 @@ struct ContentView: View {
                 Button("OK", role: .cancel) {}
             } message: {
                 Text(errorMessage)
+            }
+            .toolbar {
+                Button("Restart", action: startGame)
             }
         }
     }
@@ -62,10 +71,21 @@ struct ContentView: View {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know ;)")
             return
         }
+        
+        guard isNotRoot(word: answer) else {
+            wordError(title: "Word is the root word", message: "You can't just copy the root word, you know ;)")
+            return
+        }
+        
+        guard isLongEnough(word: answer) else {
+            wordError(title: "Word is too short", message: "Word length should be at least 3 letters to be valid")
+            return
+        }
 
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
+        score += answer.count
         newWord = ""
     }
 
@@ -100,6 +120,14 @@ struct ContentView: View {
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         return misspelledRange.location == NSNotFound
+    }
+    
+    func isNotRoot(word: String) -> Bool {
+        return word != rootWord
+    }
+    
+    func isLongEnough(word: String) -> Bool {
+        return word.count >= 3
     }
 
     func wordError(title: String, message: String) {
